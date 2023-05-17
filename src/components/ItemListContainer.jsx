@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import '../styles/ItemListContainer.css'; // Importa tu archivo CSS personalizado
+import { useLocation, Link } from 'react-router-dom';
+import '../styles/ItemListContainer.css';
 
 function ItemListContainer() {
   const location = useLocation();
@@ -11,7 +11,7 @@ function ItemListContainer() {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await fetch('/data/productos.json'); // Asegúrate de usar la ruta correcta a tu archivo JSON
+        const response = await fetch('/data/productos.json');
         const data = await response.json();
 
         // Filtrar los productos por categoría
@@ -36,11 +36,15 @@ function ItemListContainer() {
       <br />
       <div className="item-list">
         {items.map((item) => (
-          <div key={item.id} className="item-card">
+
+          <div key={item.id} className="item-card linkWithoutFx">
+            <Link className='linkWithoutFx' to={`/item/${item.id}`}>
             <h3>{item.nombre}</h3>
             <p>Descripción: {item.descripcion}</p>
-            <p>Precio: {item.precio}</p>
+            <p>Precio: ${item.precio}</p>
             <p>Categoría: {item.categoria}</p>
+            <p>Ver detalle</p>
+            </Link>
           </div>
         ))}
       </div>

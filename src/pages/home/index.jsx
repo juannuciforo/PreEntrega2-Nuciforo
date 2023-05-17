@@ -1,8 +1,7 @@
-import ItemListContainer from '../../components/ItemListContainer';
-
 function Home() {
     return <div>
-        <ItemListContainer greeting="¡Hola! bienvenido a Fire, mi E-commerce de indumentaria." />
+        <br />
+        <h6 className="text-center">¡Hola! bienvenido a Fire, mi E-commerce de indumentaria.</h6>
     </div>
 }
 
