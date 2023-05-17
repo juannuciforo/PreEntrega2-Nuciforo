@@ -4,8 +4,6 @@ import ItemListContainer from "../../../components/ItemListContainer";
 function Accesorios() {
   return (
     <div>
-      <br />
-      <h2 className="text-center">Categoría: Accesorios</h2>
       <ItemListContainer />
     </div>
   );

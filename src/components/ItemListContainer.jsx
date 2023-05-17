@@ -31,7 +31,7 @@ function ItemListContainer() {
   return (
     <div className="item-list-container">
       <br />
-      <h3>Listado de productos</h3>
+      <h3>{categoriaUrl ? `Listado de productos (${categoriaUrl})` : 'Todos los productos'}</h3>
       <br />
       <br />
       <div className="item-list">
@@ -42,7 +42,6 @@ function ItemListContainer() {
             <h3>{item.nombre}</h3>
             <p>Descripción: {item.descripcion}</p>
             <p>Precio: ${item.precio}</p>
-            <p>Categoría: {item.categoria}</p>
             <p>Ver detalle</p>
             </Link>
           </div>
