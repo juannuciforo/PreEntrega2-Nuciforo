@@ -1,0 +1,20 @@
+.item-list-container {
+    text-align: center;
+}
+
+.item-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.item-card {
+    width: calc(100% / 6 - 20px);
+    /* Ajusta el ancho según tus necesidades */
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
